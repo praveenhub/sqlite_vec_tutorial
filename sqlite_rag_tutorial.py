@@ -31,23 +31,23 @@ db.enable_load_extension(False)
 # Create a vec0 virtual table to store text files and their embeddings
 db.execute('''
     CREATE VIRTUAL TABLE documents USING vec0(
-        id INTEGER PRIMARY KEY,
         embedding float[1536],
         +file_name TEXT,
         +content TEXT
     )
 ''')
 
-# Function to get embeddings using OpenAI API
+
+# Function to get embeddings using the OpenAI API
 def get_openai_embedding(text):
     response = client.embeddings.create(
         model="text-embedding-3-small",
         input=text
-        )
-    return response.data[0].embedding    
+    )
+    return response.data[0].embedding
+
 
 # Iterate over .txt files in the /data directory
-id_counter = 1
 for file_name in os.listdir("data"):
     file_path = os.path.join("data", file_name)
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -57,10 +57,9 @@ for file_name in os.listdir("data"):
         if embedding:
             # Insert file content and embedding into the vec0 table
             db.execute(
-                'INSERT INTO documents (id, embedding, file_name, content) VALUES (?, ?, ?, ?)',
-                (id_counter, serialize_float32(embedding), file_name, content)
+                'INSERT INTO documents (embedding, file_name, content) VALUES (?, ?, ?)',
+                (serialize_float32(embedding), file_name, content)
             )
-            id_counter += 1
 
 # Commit changes
 db.commit()
@@ -77,7 +76,6 @@ if query_embedding:
     rows = db.execute(
         """
         SELECT
-            id,
             file_name,
             content,
             distance
@@ -93,7 +91,7 @@ if query_embedding:
     top_contexts = []
     for row in rows:
         print(row)
-        top_contexts.append(row[2])  # Append the 'content' column
+        top_contexts.append(row[1])  # Append the 'content' column
 
     # Prepare the context for the query
     context = "\n\n".join(top_contexts)
