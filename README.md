@@ -37,7 +37,7 @@ A simple project demonstrating Retrieval Augmented Generation (RAG) using SQLite
     ```
     OPENAI_API_KEY=your_openai_api_key_here
     ```
-- Place your `.txt` files in the data/ folder.
+- Place your `.txt` files in the `data/` folder.
 
 ## Usage
 Run the main script:
@@ -46,7 +46,7 @@ Run the main script:
     ```
 The script will:
 
-1. Embed text files from the data/ directory and store them in my_docs.db.
+1. Embed text files from the `data/` directory and store them in `my_docs.db`.
 2. Run a sample query (e.g., "What is general relativity?") to retrieve relevant documents.
 3. Generate a response using OpenAI's chat API.
 
