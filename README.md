@@ -1,6 +1,6 @@
 # SQLite RAG Tutorial
 
-A simple project demonstrating Retrieval Augmented Generation (RAG) using SQLite, [sqlite-vec](https://github.com/mozilla/ssd-vec), and OpenAI. It embeds text files, stores them in a SQLite database, and retrieves relevant documents using vector search.
+A simple project demonstrating Retrieval Augmented Generation (RAG) using SQLite, [sqlite-vec](https://github.com/asg017/sqlite-vec), and OpenAI. It embeds text files, stores them in a SQLite database, and retrieves relevant documents using vector search.
 
 ## Features
 
@@ -63,6 +63,6 @@ The script will:
 ```
 
 **Acknowledgements**
-- [sqlite-vec]((https://github.com/mozilla/ssd-vec))
+- [sqlite-vec](https://github.com/asg017/sqlite-vec)
 - OpenAI
 - Mozilla Builders Accelerator
