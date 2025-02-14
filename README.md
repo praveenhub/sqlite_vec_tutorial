@@ -41,7 +41,7 @@ A simple project demonstrating Retrieval Augmented Generation (RAG) using SQLite
 
 ## Usage
 Run the main script:
-    ```bash
+    ```
     python sqlite_rag_tutorial.py
     ```
 The script will:
