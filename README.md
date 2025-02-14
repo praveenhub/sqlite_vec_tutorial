@@ -18,30 +18,30 @@ A simple project demonstrating Retrieval Augmented Generation (RAG) using SQLite
    ```
 
 2. **Set Up a Virtual Environment:**
-```bash
-Copy
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+  ```bash
+  Copy
+  python -m venv venv
+  source venv/bin/activate  # On Windows: venv\Scripts\activate
+  ```
 
 3. **Install Dependencies:**
-```bash
-Copy
-pip install -r requirements.txt
-```
+  ```bash
+  Copy
+  pip install -r requirements.txt
+  ```
 `requirements.txt` includes:
 - sqlite-vec==0.1.6
 - openai==1.57.4
 - python-dotenv==1.0.1
 
-**Configuration**
+## Configuration
 - Create a `.env` file in the project root:
 ```
 OPENAI_API_KEY=your_openai_api_key_here
 ```
 - Place your `.txt` files in the data/ folder.
 
-**Usage**
+## Usage
 Run the main script:
 ```bash
 python sqlite_rag_tutorial.py
@@ -52,7 +52,7 @@ The script will:
 2. Run a sample query (e.g., "What is general relativity?") to retrieve relevant documents.
 3. Generate a response using OpenAI's chat API.
 
-**Project Structure**
+## Project Structure
 ```pgsql
 .
 ├── data
@@ -62,7 +62,7 @@ The script will:
 └── sqlite_rag_tutorial.py
 ```
 
-**Acknowledgements**
+## Acknowledgements
 - [sqlite-vec](https://github.com/asg017/sqlite-vec)
 - OpenAI
 - Mozilla Builders Accelerator
