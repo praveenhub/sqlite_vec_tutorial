@@ -18,17 +18,15 @@ A simple project demonstrating Retrieval Augmented Generation (RAG) using SQLite
    ```
 
 2. **Set Up a Virtual Environment:**
-  ```bash
-  Copy
-  python -m venv venv
-  source venv/bin/activate  # On Windows: venv\Scripts\activate
-  ```
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    ```
 
 3. **Install Dependencies:**
-  ```bash
-  Copy
-  pip install -r requirements.txt
-  ```
+    ```bash
+    pip install -r requirements.txt
+    ```
 `requirements.txt` includes:
 - sqlite-vec==0.1.6
 - openai==1.57.4
