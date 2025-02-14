@@ -34,16 +34,16 @@ A simple project demonstrating Retrieval Augmented Generation (RAG) using SQLite
 
 ## Configuration
 - Create a `.env` file in the project root:
-```
-OPENAI_API_KEY=your_openai_api_key_here
-```
+    ```
+    OPENAI_API_KEY=your_openai_api_key_here
+    ```
 - Place your `.txt` files in the data/ folder.
 
 ## Usage
 Run the main script:
-```bash
-python sqlite_rag_tutorial.py
-```
+    ```bash
+    python sqlite_rag_tutorial.py
+    ```
 The script will:
 
 1. Embed text files from the data/ directory and store them in my_docs.db.
@@ -51,14 +51,14 @@ The script will:
 3. Generate a response using OpenAI's chat API.
 
 ## Project Structure
-```pgsql
-.
-├── data
-│   └── *.txt
-├── my_docs.db         # Generated SQLite database
-├── requirements.txt
-└── sqlite_rag_tutorial.py
-```
+    ```pgsql
+    .
+    ├── data
+    │   └── *.txt
+    ├── my_docs.db         # Generated SQLite database
+    ├── requirements.txt
+    └── sqlite_rag_tutorial.py
+    ```
 
 ## Acknowledgements
 - [sqlite-vec](https://github.com/asg017/sqlite-vec)
