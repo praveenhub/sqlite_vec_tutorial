@@ -8,6 +8,9 @@ A simple project demonstrating Retrieval Augmented Generation (RAG) using SQLite
 - **Vector Search:** Semantic search with sqlite-vec.
 - **OpenAI Integration:** Uses OpenAI for embeddings and chat responses.
 
+#### Read the blog
+[Details in this blog](https://losangelesaiapps.com/retrieval-augmented-generation-in-sqlite/) 
+
 ## Installation
 
 1. **Clone the Repository:**
